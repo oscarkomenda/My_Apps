@@ -1,0 +1,189 @@
+body {
+  background: #e0e0e0;
+  padding-top: 80px;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: 15px;
+  background: #04e35a;
+  box-shadow: 0px 2px 4px #5c5454;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+header input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  background: #525a56;
+  border-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  padding: 0 60px 0 0;
+  font-family: Baloo, cursive;
+  font-size: 18px;
+  text-indent:  20px;
+  color: #ffffff;
+  -webkit-appearance: none;
+}
+
+header button {
+  width: 50px;
+  height:  50px;
+  position: absolute;
+  background: white;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  border-radius: 25px;
+  box-shadow: none;
+  outline: none;
+  font-family: Baloo, cursive;
+  font-size: 32px;
+}
+
+.container-fluid {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  font-family: Baloo, cursive;
+}
+
+.todo {
+  width: 100%;
+  float: left;
+  list-style: none;
+}
+
+li {
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  background: white;
+  margin: 0px 0px 10px 0px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px #5c5454;
+  position: relative;
+  padding: 14px 100px 14px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+  font-size: 20px;
+}
+
+li:last-of-type {
+  margin: 0;
+}
+
+ul {
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+
+.buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right:0;
+  font-size: 16px;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  box-shadow: none;
+  border: 0;
+  background: none;
+  position: relative;
+}
+
+.buttons button:last-of-type::before {
+  content:"";
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #999999;
+}
+
+li .removeIcon {
+  color: #999;
+}
+
+li .glyphicon-trash:hover {
+  color: red;
+  transition: color 0.2s ease;
+}
+
+li .completeIcon {
+  color: #04e35a;
+  border-radius: 20px;
+  transition: color 0.2s ease;
+}
+
+li .glyphicon-ok:hover {
+  color: #04e35a;
+  background: white;
+  transition: color 0.2s ease;
+  border-style: solid;
+  padding: 2px;
+  transition: background 0.2s ease;
+  transition: border-style 0.2s ease;
+  transition: padding 0.2s ease;
+}
+
+#completed .completeIcon {
+  color: #04e35a;
+  transition: color 0.2s ease;
+  border-style: solid;
+  border-color: #04e35a;
+  padding: 3px;
+}
+
+#completed {
+  opacity: 0.5;
+  padding: 60px 0 0 0;
+  position: relative;
+}
+
+#completed:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #aaa;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin: 0 0 0 -75px;
+}
+
+#todo:empty:after {
+  content: 'You have nothing to do!';
+
+}
+
+#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
+}
+
+#todo:after, #completed:after {
+  width: 100%;
+  display:block;
+  text-align: center;
+  margin-top: 15px;
+  color: #aaa;
+}
